@@ -1,4 +1,22 @@
 # Task-Autonomous-systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Пример ввода: ya.ru
 Вывод:
 1| 2a01:540:4:38c9:b8fb:668c:854:4d17 | AS12389 PJSC Rostelecom | 2a01:540:4:38c9:b8fb:668c:854:4d17 | RU
