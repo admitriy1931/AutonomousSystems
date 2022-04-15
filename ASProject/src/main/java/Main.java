@@ -28,11 +28,12 @@ public class Main {
             String command = "tracert -d ";
             ArrayList<String> lines = getArrayLines(command, ip);
             ArrayList<String> ipAdrasses = getArrayIpAdrasses(lines);
+            System.out.println(String.format("%s| %46s| %25s| %S","№","IP - Adress","Autonomous-system","Country"));
             for (int i = 1; i < ipAdrasses.size(); i++) {
                 String json = readUrl("https://ipinfo.io/" + ipAdrasses.get(i) + "?token=930655cd47dcde");
                 Gson gson = new Gson();
                 JsonFields page = gson.fromJson(json, JsonFields.class);
-                System.out.println(i + "| " + page.ip + " | " + page.org + " | " + page.ip + " | " + page.country);
+                System.out.println(String.format("%s| %46s| %25s| %S",i,page.ip,page.org,page.country));
             }
         }
         else{
